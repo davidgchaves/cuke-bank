@@ -1,3 +1,6 @@
+# TODO LIST:
+# - We need to implement the Account properly, with unit tests
+
 class Account
   def initialize
   end
