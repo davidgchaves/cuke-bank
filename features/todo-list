@@ -2,4 +2,4 @@
 # - We need to implement the Account properly, with unit tests
 # - We need to implement the Teller properly, with unit tests
 # - We need to implement the CashSlot properly, with unit tests
-# - Do we really need amount as an argument to the Teller's withdraw_from method?
+# - Tidy up duplication in account step
