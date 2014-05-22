@@ -1,9 +1,3 @@
-# TODO LIST:
-# - We need to implement the Account properly, with unit tests
-# - We need to implement the Teller properly, with unit tests
-# - We need to implement the CashSlot properly, with unit tests
-# - Do we really need amount as an argument to the Teller's withdraw_from method?
-
 Given /^I have deposited (#{CAPTURE_CASH_AMOUNT}) in my account$/ do |amount|
   my_account.deposit amount
   expect(my_account.balance).to eq(amount),
