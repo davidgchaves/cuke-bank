@@ -4,8 +4,6 @@
 # - We need to implement the CashSlot properly, with unit tests
 # - Do we really need amount as an argument to the Teller's withdraw_from method?
 
-require File.join File.dirname(__FILE__), '..', '..', 'lib', 'cuke_bank'
-
 module KnowsMyDomain
   def my_account
     @my_account ||= Account.new
