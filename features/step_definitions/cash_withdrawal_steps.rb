@@ -14,11 +14,11 @@ class Account
   end
 end
 
-Transform /^\d+$/ do |number|
-  number.to_i
+CAPTURE_CASH_AMOUNT = Transform /^\$(\d+)$/ do |digits|
+  digits.to_i
 end
 
-Given /^I have deposited \$(\d+) in my account$/ do |amount|
+Given /^I have deposited (#{CAPTURE_CASH_AMOUNT}) in my account$/ do |amount|
   my_account = Account.new
   my_account.deposit amount
   expect(my_account.balance).to eq(amount),
