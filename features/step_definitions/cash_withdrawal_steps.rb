@@ -4,35 +4,7 @@
 # - We need to implement the CashSlot properly, with unit tests
 # - Do we really need amount as an argument to the Teller's withdraw_from method?
 
-class Account
-  def deposit(amount)
-    @balance = amount
-  end
-
-  def balance
-    @balance
-  end
-end
-
-class Teller
-  def initialize(cash_slot)
-    @cash_slot = cash_slot
-  end
-
-  def withdraw_from(account, amount)
-    @cash_slot.dispense amount
-  end
-end
-
-class CashSlot
-  def contents
-    @contents or raise("I'm empty!")
-  end
-
-  def dispense(amount)
-    @contents = amount
-  end
-end
+require File.join File.dirname(__FILE__), '..', '..', 'lib', 'cuke_bank'
 
 module KnowsMyDomain
   def my_account
