@@ -1,6 +1,11 @@
 require 'fileutils'
 
 class TransactionQueue
+  def self.clear
+    FileUtils.rm_rf "messages"
+    FileUtils.mkdir_p "messages"
+  end
+
   def initialize
     @next_id = 1
   end
