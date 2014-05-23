@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sinatra', '~> 1.4.5'
+gem 'service_manager', '~> 0.6.4'
 
 group :test do
   gem 'cucumber', '~> 1.3.15'
