@@ -1,3 +1,4 @@
 capybara-*
 balance
 messages/
+db/*.db
